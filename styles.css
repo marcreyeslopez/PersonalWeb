@@ -1,0 +1,222 @@
+:root {
+  /* Material-like palette (professional blue) */
+  --md-primary: #1976D2; /* Blue 700 */
+  --md-primary-variant: #1565C0;
+  --md-secondary: #009688; /* Teal */
+  --md-surface: #FFFFFF;
+  --md-background: #F5F7FB;
+  --md-on-surface: #0F172A;
+  --md-muted: #6B7280;
+  --md-error: #D32F2F;
+  --radius: 10px;
+  --max-width: 1000px;
+}
+
+/* utility */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Inter, system-ui, 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--md-on-surface);
+  background: var(--md-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(90deg, rgba(25, 118, 210, 0.06), transparent);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--md-primary-variant);
+}
+
+.main-nav a {
+  margin: 0 0.5rem;
+  color: var(--md-on-surface);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.25rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, transparent, rgba(2, 6, 23, 0.02));
+}
+
+.lead {
+  color: var(--md-muted);
+  max-width: 60ch;
+}
+
+/* Buttons (Material-like) */
+.btn {
+  display: inline-block;
+  background: var(--md-primary);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.18);
+  font-weight: 500;
+  transition: box-shadow 150ms ease, transform 120ms ease;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  color: var(--md-on-surface);
+  margin-left: 0.5rem;
+  box-shadow: none;
+}
+
+/* Sections */
+.about,
+.portfolio,
+.contact {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Card styles using elevation */
+.project-card {
+  background: var(--md-surface);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+  transform: translateY(-4px);
+}
+
+.project-links a {
+  color: var(--md-primary);
+  text-decoration: none;
+}
+
+.contact-form {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.6rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 8px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--md-primary);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.08);
+}
+
+.form-status {
+  color: var(--md-muted);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.socials a {
+  margin-right: 1rem;
+  color: var(--md-primary);
+  text-decoration: none;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.04);
+  padding: 1rem 0;
+  text-align: center;
+  background: transparent;
+}
+
+/* Elevation utility classes */
+.elevation-0 { box-shadow: none; }
+.elevation-1 { box-shadow: 0 1px 3px rgba(15,23,42,0.08); }
+.elevation-2 { box-shadow: 0 6px 18px rgba(15,23,42,0.10); }
+.elevation-3 { box-shadow: 0 12px 36px rgba(15,23,42,0.12); }
+/* Responsive nav */
+@media (max-width: 760px) {
+  #nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    right: 1rem;
+    top: 64px;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
+    display: none;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+}
+
+/* CV print-friendly */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .site-header,
+  .site-footer,
+  #nav-toggle,
+  .main-nav {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
