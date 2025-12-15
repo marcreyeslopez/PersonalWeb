@@ -181,6 +181,79 @@ body {
 .elevation-1 { box-shadow: 0 1px 3px rgba(15,23,42,0.08); }
 .elevation-2 { box-shadow: 0 6px 18px rgba(15,23,42,0.10); }
 .elevation-3 { box-shadow: 0 12px 36px rgba(15,23,42,0.12); }
+
+/* Responsive adjustments to maintain minimum margins */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .projects {
+    gap: 0.75rem;
+  }
+
+  .project-card {
+    padding: 0.875rem;
+  }
+
+  .about,
+  .portfolio,
+  .contact {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .project-card {
+    padding: 0.75rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .btn.ghost {
+    margin-left: 0.25rem;
+  }
+
+  .about,
+  .portfolio,
+  .contact {
+    padding: 1rem 0;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+}
 /* Responsive nav */
 @media (max-width: 760px) {
   #nav-toggle {
