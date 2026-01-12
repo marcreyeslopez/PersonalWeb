@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ca">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,38 +10,58 @@
     <header class="site-header">
       <div class="container header-inner">
         <h1 class="site-title">CV — Marc Reyes</h1>
-        <a class="btn" href="index.html">Tornar</a>
+        <a class="btn" href="index.html">Volver</a>
       </div>
     </header>
     <main>
       <div class="container">
-        <section class="cv-intro">
-          <p><strong>Nom:</strong> Marc Reyes</p>
-          <p><strong>Rol:</strong> Desenvolupador Frontend</p>
-          <p>Desenvolupador centrat en experiència d'usuari, accessibilitat i rendiment web.</p>
-        </section>
+        <!-- Boxer Card -->
+        <div class="boxer-card">
+          <div class="boxer-header">
+            <h2 class="boxer-name">Marc Reyes</h2>
+            <div class="boxer-stats-header">
+              <span class="boxer-record">DESARROLLADOR FRONTEND</span>
+            </div>
+          </div>
 
-        <section class="cv-section">
-          <h3>Educació</h3>
-          <ul>
-            <li>Grau Superior De Desenvolupament Web - Es Liceu</li>
-          </ul>
-        </section>
+          <div class="boxer-profile">
+            <p class="boxer-bio">Luchador digital enfocado en la experiencia del usuario, accesibilidad y rendimiento web. Un experto en el ring del frontend.</p>
+          </div>
 
-        <section class="cv-section">
-          <h3>Experiència</h3>
-          <ul>
-            <li>Pràctiques a Empresa Artem — Millores de rendiment i accessibilitat.</li>
-            <li>Practiques de Dani amb un 8</li>
-          </ul>
-        </section>
+          <!-- Stats Row 1 -->
+          <div class="boxer-stats-grid">
+            <div class="stat-box">
+              <span class="stat-label">CAMPEONATO</span>
+              <span class="stat-value">Grado Superior de Desarrollo Web - Es Liceu - 2025-2026</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">RÉCORD PROFESIONAL</span>
+              <div class="stat-value-list"> 
+                <span>• Prácticas de Dani - 2024 - (1-0)</span>
+                <span>• Programacion con Pere Negre - 2024 - (1-1)</span>
+                <span>• Prácticas en Empresa Artem - 2025 - (2-1)</span>
+                <span>• Programacion con Pere Negre - 2026 - ( - )</span>
 
-        <section class="cv-section">
-          <h3>Habilitats</h3>
-          <p>HTML, CSS, JavaScript, React, Node.js, D3, Accessibilitat (a11y), SEO, Performance.</p>
-        </section>
+              </div>
+            </div>
+          </div>
 
-        <p><a class="btn" href="index.html" onclick="window.print();return false;">Imprimir CV</a></p>
+          <!-- Skills as Weapons -->
+          <div class="boxer-weapons">
+            <h3 class="weapons-title">⚔️ ARSENAL DE COMBATE</h3>
+            <div class="weapons-grid">
+              <div class="weapon-badge">HTML</div>
+              <div class="weapon-badge">CSS</div>
+              <div class="weapon-badge">JavaScript</div>
+              <div class="weapon-badge">React</div>
+              <div class="weapon-badge">Performance</div>
+            </div>
+          </div>
+
+          <div class="boxer-footer">
+            <p><a class="btn" href="index.html" onclick="window.print();return false;">Imprimir Tarjeta de Boxeador</a></p>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="site-footer">
